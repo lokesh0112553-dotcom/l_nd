@@ -9,7 +9,10 @@ import string
 import os
 from faker import Faker
 
-user_agent = UserAgent().random
+try:
+    user_agent = UserAgent().random
+except:
+    user_agent = "Mozilla/5.0"
 fake = Faker()
       
 def generate_random_string(length=10):
